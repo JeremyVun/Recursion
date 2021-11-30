@@ -1,20 +1,17 @@
-from measure import measure
-from fib import fib, fib_tail, fib_iterative, fib_math
+def power_of(a, b):
+  if b == 0:
+    return 1
+  return power_of(a, b-1) * 2
+
 
 def main():
-  while True:
-    num = int(input("What fibonacci number do you want? "))
-    choice = input("(r)ecursively, (t)ail recursively, (i)teratively or (m)athematically? ")
+  # 2^5
+  result = power_of(2, 5)
+  print(result)
 
-    if choice == "r":
-      measure(fib, num)
-    elif choice == "i":
-      measure(fib_iterative, num)
-    elif choice == "t":
-      measure(fib_tail, num)
-    elif choice == "m":
-      measure(fib_math, num)
-    
 
+######
+# Entry point
+######
 if __name__ == "__main__":
   main()
