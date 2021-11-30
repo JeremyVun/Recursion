@@ -1,6 +1,7 @@
 from measure import measure
 from fib import fib, fib_tail, fib_iterative, fib_math
 
+# Fibonacci calculator
 def main():
   while True:
     num = int(input("What fibonacci number do you want? "))
